@@ -18,24 +18,18 @@ used_songs = []
 def unload():
     used_songs.clear()
 
+def shuffledList():
 
-def orderedList():
+    songOrder = [] # place holder
 
-    songOrder = []
+    for x in key_list: # loop through dictionary key list to put in place holder
+        songOrder.append(x)
 
-    while 0 <= len(val_list):
+    random.shuffle(songOrder) # randomize the list
 
-        song_selection = (random.randrange(len(val_list)) + 1)
+    # print(songOrder) 
 
-        if song_selection in songOrder:
-            continue
-        else:
-            songOrder.append(song_selection)
-
-    print(songOrder)
-
-
-def get_song():
+def next_song1():
 
     t = 0
 
@@ -80,8 +74,7 @@ def get_song():
         print("")
         unload()
 
-
-def rewind():
+def previous_song1():
 
     # index = song_selection.index()
 
@@ -97,8 +90,7 @@ def rewind():
 
 
 num = 0
-
-'''while num == 0:
+while num == 0:
     print("Music Player - Main Menu")
     print(" ")
     print("1 - Next Song, 2 - Previous Song, 3 - Exit Program")
@@ -108,22 +100,19 @@ num = 0
     print("")
 
     if prompt == 1:
-        get_song()
-
+        
         continue
     elif prompt == 2:
-        rewind()
-        print("")
+        
         continue
     elif prompt == 3:
         num = 1
         print("Closing Music Player...")
     else:
-        print("Please read instructions again.")'''
+        print("Please read instructions again.")
 
 # testing orderedList function
 
-orderedList()
 
 
 # Mar 3rd 1:47:38 AM
@@ -142,5 +131,7 @@ orderedList()
 # We want to end the loop after it is completed, and then empty out used_songs, so the loop can run again
 
 # Check to see how to rewind to the last song
+
 # General Idea: Get the last updated item in used songs, and get the corrisponding song that goes with it.
+
 # Check out red dots to see the tests
