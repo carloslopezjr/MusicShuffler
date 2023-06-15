@@ -19,6 +19,22 @@ def unload():
     used_songs.clear()
 
 
+def orderedList():
+
+    songOrder = []
+
+    while 0 <= len(val_list):
+
+        song_selection = (random.randrange(len(val_list)) + 1)
+
+        if song_selection in songOrder:
+            continue
+        else:
+            songOrder.append(song_selection)
+
+    print(songOrder)
+
+
 def get_song():
 
     t = 0
@@ -82,7 +98,7 @@ def rewind():
 
 num = 0
 
-while num == 0:
+'''while num == 0:
     print("Music Player - Main Menu")
     print(" ")
     print("1 - Next Song, 2 - Previous Song, 3 - Exit Program")
@@ -103,7 +119,11 @@ while num == 0:
         num = 1
         print("Closing Music Player...")
     else:
-        print("Please read instructions again.")
+        print("Please read instructions again.")'''
+
+# testing orderedList function
+
+orderedList()
 
 
 # Mar 3rd 1:47:38 AM
