@@ -14,21 +14,33 @@ key_list = list(my_songs.keys())
 # the used songs, that won't be generated randomly
 used_songs = []
 
+songOrder = []  # place holder
 
 def unload():
     used_songs.clear()
 
-def shuffledList():
-
-    songOrder = [] # place holder
+def shuffledList(songOrder):
 
     for x in key_list: # loop through dictionary key list to put in place holder
         songOrder.append(x)
 
     random.shuffle(songOrder) # randomize the list
 
-    # print(songOrder) 
+    return songOrder
 
+def next_song2(usedSongs):
+    # we want to get the shuffled list
+    
+    # play the first song in the list
+
+    # once selected again, play the second song in the list
+     
+def previous_song2():
+
+
+
+
+# OLD FUNCTIONS
 def next_song1():
 
     t = 0
